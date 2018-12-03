@@ -104,12 +104,13 @@ public class ExpandableLinearLayout extends LinearLayout {
     createAnimator(mDuration, 1, 0).start();
   }
 
-  public void toggle() {
+  public boolean toggle() {
     if (isExpanded) {
       collapse();
     } else {
       expand();
     }
+    return isExpanded;
   }
 
   public void setExpansion(float mExpansion) {
